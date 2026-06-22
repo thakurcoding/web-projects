@@ -1,0 +1,41 @@
+body{
+    margin:0;
+    overflow:hidden;
+}
+
+.scene{
+    position:relative;
+    width:100vw;
+    height:100vh;
+}
+
+.launchpad{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.rocket{
+    position:absolute;
+    left:50%;
+    bottom:20px;
+    width:500px;
+    background: transparent;
+    transform:translateX(-50%);
+    animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%{
+        transform:translateX(-50%) translateY(0);
+    }
+    50%{
+        transform:translateX(-50%) translateY(-500px);
+    }
+    100%{
+        transform:translateX(-50%) translateY(0);
+    }
+}
